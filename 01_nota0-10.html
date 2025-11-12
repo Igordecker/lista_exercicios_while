@@ -6,10 +6,13 @@
     */
 
     //ENTRADA
-
+let nota = Number(prompt(`Informe uma nota entre zero e dez`))
 
     //PROCESSAMENTO
-
+while(nota < 0 || nota > 10){
+alert(`Nota inválida`)
+nota = Number(prompt(`Informe uma nota entre zero e dez`))
+}
 
     //SAÍDA
 

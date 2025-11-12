@@ -1,4 +1,5 @@
 <meta charset="UTF-8">
+<meta charset="UTF-8">
 <script>
     /*
     PROBLEMA: VALIDAR DADOS DO USUÁRIO
@@ -9,10 +10,33 @@
     Sexo: 'f' ou 'm';
     Estado Civil: 's', 'c', 'v', 'd';
     */
-
+;
     //ENTRADA
-
-
+    let nome = prompt(`Informe seu nome`);
+let idade = Number(prompt(`Informe sua idade`));
+let salario = Number(prompt(`Informe seu salário`));
+let sexo = prompt(`Informe seu sexo "f" para feminino e "m" para masculino`).toLowerCase();
+let estadocivil = prompt(`Informe seu estado civil "s" para solteiro, "c" para casado, "v' para viuvo e "d" para divorciado`).toLowerCase()
+while(nome.length < 3){
+    alert(`Seu nome deve conter mais de 3 caracteres`);
+    nome = prompt(`Informe seu nome`);
+}
+while(idade<0 || idade>150){
+    alert(`Sua idade deve ser entre 0 e 150`);
+    idade = Number(prompt(`Informe sua idade`));
+}
+while(salario < 0){
+    alert(`Seu salário deve ser maior que 0`);
+    salario = Number(prompt(`Informe seu salário`));
+}
+while(sexo != "m" && sexo != "f"){
+    alert(`Insíra um sexo valido, apenas m e f`);
+    sexo = prompt(`Informe seu sexo "f" para feminino e "m" para masculino`).toLowerCase();
+}
+while(estadocivil != "c" && estadocivil != "s" && estadocivil != "d" && estadocivil != "v"){
+    alert(`Seu estado civil é inválido`)
+    estadocivil = prompt(`Informe seu estado civil "s" para solteiro, "c" para casado, "v' para viuvo e "d" para divorciado`).toLowerCase();
+}
     //PROCESSAMENTO
 
 
