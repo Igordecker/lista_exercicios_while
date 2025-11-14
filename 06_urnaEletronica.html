@@ -20,11 +20,45 @@
     */
 
     //ENTRADA
+    let quantidademariazinha = 0;
+    let quantidadejoaozinho = 0;
+    let quantidadenulo = 0;
+    let quantidadebranco = 0;
+    let quantidadedevotos = 0;
+    let voto;
+    do{ voto = prompt(`    1. Candidato Joãozinho 
+    2. Candidato Mariazinha 
+    3. Nulo   
+    4. Branco 
+    Entre com o seu voto:`)
+if(voto >0 && voto < 5){
+    quantidadedevotos++}
+if(voto == 1){
+quantidadejoaozinho++
+}
+if(voto == 2){
+quantidademariazinha++
+}
+if(voto == 3){
+quantidadenulo++
+}
+if(voto == 4){
+quantidadebranco++
+}
+}while(voto!=0)
 
-
+const porcentagemdenulo = quantidadenulo/quantidadedevotos*100;
+const porcentagemdebranco = quantidadebranco/quantidadedevotos*100
     //PROCESSAMENTO
-
-
+document.write(`A quantidade de votos da mariazinha é :${quantidademariazinha}<br>
+A quantidade de votos do joãozinho é:${quantidadejoaozinho}<br>
+A porcetagem de votos nulos é %${quantidadenulo.toFixed(2)}<br>
+A porcetagem de votos branco é %${quantidadebranco.toFixed(2)}<br>`)
+if(quantidadejoaozinho>quantidademariazinha){
+    document.write(`O vencedor é o joaõzinho`)}
+else{
+    document.write(`A vencedora é a mariazinha`)
+}
     //SAÍDA
 
 </script>
