@@ -8,24 +8,48 @@
     b) A maior e a menor idade do grupo;
     c) A quantidade de mulheres na região;
     d) A idade e o sexo da pessoa que possui o menor salário;
-
     Finalize a entrada de dados ao ser digitada uma idade negativa.
     */
 
     //ENTRADA
-    let menorsalario;
-    let menoridade;
-    let maioridade;
+    let menoridade = Infinity
+    let maioridade = -Infinity
     let quantidademulheres = 0;
+    let somadesalarios = 0;
+    let quantidadedepesoas = 0;
+    let menorsalario = Infinity;
+    let idadedapessoacommenorsalario;
+    let sexodapessoacommenorsalario;
+    let idade =1;
 do{
-let idade = Number(prompt(`Informe sua idade`))
-let sexo = prompt(`Informe seu sexo`)
+idade = Number(prompt(`Informe sua idade`))
+if(idade<0) break;
+let sexo = prompt(`Informe seu sexo "f" feminino e "m" masculino`).toLowerCase();
 let salario = Number(prompt(`Informe seu salario`))
-if()
-} while(idade > 0)
+quantidadedepesoas++;
+somadesalarios += salario;
+if(menorsalario > salario){
+    menorsalario = salario
+    sexodapessoacommenorsalario = sexo
+    idadedapessoacommenorsalario = idade
+}
+if(sexo == "f"){
+    quantidademulheres++
+}
+if(maioridade < idade){
+    maioridade = idade
+}
+if(menoridade > idade && idade >= 0){
+    idade = menoridade
+}
+} while(idade >= 0)
     //PROCESSAMENTO
-
+let mediadesalario = somadesalarios/quantidadedepesoas;
 
     //SAÍDA
+document.write(`A média de sálarios é:R$${mediadesalario}<br>
+A maior idade é ${maioridade} e a menor idade é ${menoridade}<br>
+A quantidade de mulheres na região é ${quantidademulheres}<br>
+A idade da pessoa com  o menor salário é ${idadedapessoacommenorsalario} anos, e o sexo da pessoa é ${sexodapessoacommenorsalario}`)
 
 </script>

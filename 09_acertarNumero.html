@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <script>
     //Problema: Acertar o número
     /*
@@ -5,11 +6,20 @@
     */
 
     //ENTRADA
-
+const numeroaleatorio = Math.floor((Math.random()*30)+1)
 
     //PROCESSAMENTO
-
+    let numero = -10
+do{
+numero = Number(prompt(`Escolha um número entre 1 a 30`))
+if(numero > numeroaleatorio){
+    alert(`Escolha um número um pouco menor`)
+}
+else{
+    alert(`Escolha um número um pouco maior`)
+}
+}while(numeroaleatorio != numero)
 
     //SAÍDA
-    
+    alert(`Você acertou o número aleátorio`)
 </script>

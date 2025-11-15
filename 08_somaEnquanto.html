@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <script>
     //Problema: Soma de números até um limite
     /*
@@ -5,11 +6,14 @@
     */
     
     //ENTRADA
-
-
+    let numero = Number(prompt(`Infome um número`))
+let soma= 0;
     //PROCESSAMENTO
-
+while(numero > 0){
+soma += numero
+numero = Number(prompt`Informe um número`)
+}
 
     //SAÍDA
-    
+alert(`A soma total destes números é ${soma}`)
 </script>

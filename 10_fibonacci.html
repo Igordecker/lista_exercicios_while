@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <script>
     //Problema: Fibonacci
     /*
@@ -5,11 +6,19 @@
     */
 
     //ENTRADA
-
-
-    //PROCESSAMENTO
-
+const quantidadedasequencia = Number(prompt(`Informe a quantidade de vezes que deseja executar a sequencia de Fibonacci`));
+let vezesfeitas = 0;
+let valor = 1;
+let valorantigo = 0;
+let resultado;
+  //PROCESSAMENTO
+while(quantidadedasequencia != vezesfeitas){
+vezesfeitas ++
+resultado = valor + valorantigo;
+valorantigo = valor;
+valor = resultado
+}
 
     //SAÍDA
-    
+    alert(`O valor da sequencia na ${vezesfeitas}° execução é ${valor}`)
 </script>
