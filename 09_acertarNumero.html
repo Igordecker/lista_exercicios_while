@@ -6,20 +6,23 @@
     */
 
     //ENTRADA
-const numeroaleatorio = Math.floor((Math.random()*30)+1)
+const numeroaleatorio = Math.floor((Math.random()*30)+1);
 
     //PROCESSAMENTO
-    let numero = -10
+    let numero;
 do{
 numero = Number(prompt(`Escolha um número entre 1 a 30`))
 if(numero > numeroaleatorio){
     alert(`Escolha um número um pouco menor`)
 }
-else{
+else if (numero < numeroaleatorio){
     alert(`Escolha um número um pouco maior`)
+}
+else{
+
+    alert(`Você acertou o número aleátorio`)
 }
 }while(numeroaleatorio != numero)
 
     //SAÍDA
-    alert(`Você acertou o número aleátorio`)
 </script>

@@ -8,7 +8,7 @@
     //ENTRADA
 let senha = prompt(`Informe uma senha formada por 4 números inteiros`)
     //PROCESSAMENTO
-while(senha.length <4 || senha.length >4 || senha.includes(".")==true || senha.includes(",")==true || isNaN(Number(senha))){
+while(senha.length <4 || senha.length >4 || senha.includes(".")==true || senha.includes(",")==true || isNaN(senha)){
     alert(`Senha incorreta`)
     senha = prompt(`Informe uma senha formada por 4 números inteiros`)
 } 
